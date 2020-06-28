@@ -9,9 +9,9 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.*;
 
-public class AnimalTest {
+public class BirdTest {
+    Bird bird = new Bird();
 
-    Animal animal = new Animal();
     private PrintStream printStream; // TODO : Move to base test or suite
     private ByteArrayOutputStream byteArrayOutputStream;
 
@@ -27,7 +27,14 @@ public class AnimalTest {
     }
 
     @Test
-    public void walk() {
+    public void fly() {
+        bird.fly();
+        assertEquals("I am flying\r\n", byteArrayOutputStream.toString());
+    }
 
+    @Test
+    public void sing() {
+        bird.sing();
+        assertEquals("I am singing\r\n", byteArrayOutputStream.toString());
     }
 }
