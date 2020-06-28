@@ -22,6 +22,7 @@ public class SolutionTest extends BaseTest {
         solution.main(null);
         assertEquals("I am walking\r\n" +
                 "I am flying\r\n" +
-                "I am singing\r\n", byteArrayOutputStream.toString());
+                "I am singing\r\n" +
+                "Cock-a-doodle-doo\r\n", byteArrayOutputStream.toString());
     }
 }

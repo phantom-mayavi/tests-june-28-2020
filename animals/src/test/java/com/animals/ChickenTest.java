@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class ChickenTest extends BaseTest {
 
     Chicken chicken = new Chicken();
+    Chicken.Rooster rooster = new Chicken.Rooster();
 
     @Before
     public void setUp() throws Exception {
@@ -23,6 +24,12 @@ public class ChickenTest extends BaseTest {
     public void sing() {
         chicken.sing();
         assertEquals("Cluck, cluck\r\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void sing_rooster() {
+        rooster.sing();
+        assertEquals("Cock-a-doodle-doo\r\n", byteArrayOutputStream.toString());
     }
 
     @Test
