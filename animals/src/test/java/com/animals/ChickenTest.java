@@ -1,6 +1,7 @@
 package com.animals;
 
 import com.animals.app.BaseTest;
+import com.animals.constants.Sound;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,13 +25,13 @@ public class ChickenTest extends BaseTest {
     @Test
     public void sing() {
         chicken.sing();
-        assertEquals(addNewLine("Cluck, cluck"), byteArrayOutputStream.toString());
+        assertEquals(addNewLine(Sound.CHICKEN.getSound()), byteArrayOutputStream.toString());
     }
 
     @Test
     public void sing_rooster() {
         rooster.sing();
-        assertEquals(addNewLine("Cock-a-doodle-doo"), byteArrayOutputStream.toString());
+        assertEquals(addNewLine(Sound.ROOSTER.getSound()), byteArrayOutputStream.toString());
     }
 
     @Test

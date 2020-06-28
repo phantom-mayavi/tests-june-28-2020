@@ -1,11 +1,13 @@
 package com.animals;
 
+import com.animals.constants.Sound;
+import com.animals.helper.SoundHelper;
+
 import static com.animals.constants.ApplicationConstants.SWIMMING;
 
 public class Duck extends Bird {
-    @Override
-    public void sing() {
-        System.out.println("Quack, quack");
+    public Duck() {
+        super(new SoundHelper(Sound.DUCK));
     }
 
     public void swim() {

@@ -1,6 +1,7 @@
 package com.animals;
 
 import com.animals.app.BaseTest;
+import com.animals.constants.Sound;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +24,7 @@ public class DuckTest extends BaseTest {
     @Test
     public void sing() {
         duck.sing();
-        assertEquals(addNewLine("Quack, quack"), byteArrayOutputStream.toString());
+        assertEquals(addNewLine(Sound.DUCK.getSound()), byteArrayOutputStream.toString());
     }
 
     @Test

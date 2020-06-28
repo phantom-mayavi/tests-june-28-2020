@@ -1,10 +1,18 @@
 package com.animals;
 
+import com.animals.actions.NonFlyable;
+import com.animals.constants.Sound;
+import com.animals.helper.SoundHelper;
+
 import static com.animals.constants.ApplicationConstants.CANT_FLY;
 
-public class Chicken extends Bird {
-    public void sing() {
-        System.out.println("Cluck, cluck");
+public class Chicken extends Bird implements NonFlyable {
+    public Chicken() {
+        super(new SoundHelper(Sound.CHICKEN));
+    }
+
+    public Chicken(SoundHelper soundHelper) {
+        super(soundHelper);
     }
 
     @Override
@@ -12,9 +20,9 @@ public class Chicken extends Bird {
         System.out.println(CANT_FLY);
     }
 
-    public static class Rooster {
-        public void sing() {
-            System.out.println("Cock-a-doodle-doo");
+    public static class Rooster extends Chicken {
+        public Rooster() {
+            super(new SoundHelper(Sound.ROOSTER));
         }
     }
 }
