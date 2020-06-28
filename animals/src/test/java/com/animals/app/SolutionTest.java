@@ -4,7 +4,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SolutionTest {
+import static org.junit.Assert.assertEquals;
+
+public class SolutionTest extends BaseTest {
+    Solution solution = new Solution();
 
     @Before
     public void setUp() throws Exception {
@@ -15,6 +18,10 @@ public class SolutionTest {
     }
 
     @Test
-    public void main() {
+    public void testMain() {
+        solution.main(null);
+        assertEquals("I am walking\r\n" +
+                "I am flying\r\n" +
+                "I am singing\r\n", byteArrayOutputStream.toString());
     }
 }
