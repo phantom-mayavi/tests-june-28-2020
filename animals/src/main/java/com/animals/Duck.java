@@ -1,5 +1,7 @@
 package com.animals;
 
+import static com.animals.constants.ApplicationConstants.SWIMMING;
+
 public class Duck extends Bird {
     @Override
     public void sing() {
@@ -7,6 +9,6 @@ public class Duck extends Bird {
     }
 
     public void swim() {
-        System.out.println("I am swimming");
+        System.out.println(SWIMMING);
     }
 }

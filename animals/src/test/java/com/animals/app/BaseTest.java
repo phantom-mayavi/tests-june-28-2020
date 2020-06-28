@@ -21,4 +21,8 @@ public class BaseTest {
     public void tearDown() throws Exception {
         byteArrayOutputStream.reset();
     }
+
+    public static String addNewLine(String str) {
+        return str + "\r\n";
+    }
 }

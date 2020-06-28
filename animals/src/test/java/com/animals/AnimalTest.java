@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static com.animals.constants.ApplicationConstants.WALKING;
 import static org.junit.Assert.*;
 
 public class AnimalTest extends BaseTest {
@@ -25,6 +26,6 @@ public class AnimalTest extends BaseTest {
     @Test
     public void walk() {
         animal.walk();
-        assertEquals("I am walking\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine(WALKING), byteArrayOutputStream.toString());
     }
 }

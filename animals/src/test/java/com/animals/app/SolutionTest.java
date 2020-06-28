@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.animals.constants.ApplicationConstants.FLYING;
+import static com.animals.constants.ApplicationConstants.WALKING;
 import static org.junit.Assert.assertEquals;
 
 public class SolutionTest extends BaseTest {
@@ -20,9 +22,9 @@ public class SolutionTest extends BaseTest {
     @Test
     public void testMain() {
         solution.main(null);
-        assertEquals("I am walking\r\n" +
-                "I am flying\r\n" +
-                "I am singing\r\n" +
-                "Cock-a-doodle-doo\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine(WALKING) +
+                addNewLine(FLYING) +
+                addNewLine("I am singing") +
+                addNewLine("Cock-a-doodle-doo"), byteArrayOutputStream.toString());
     }
 }

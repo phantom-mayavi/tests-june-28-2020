@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.animals.constants.ApplicationConstants.FLYING;
 import static org.junit.Assert.*;
 
 public class BirdTest extends BaseTest {
@@ -21,12 +22,12 @@ public class BirdTest extends BaseTest {
     @Test
     public void fly() {
         bird.fly();
-        assertEquals("I am flying\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine(FLYING), byteArrayOutputStream.toString());
     }
 
     @Test
     public void sing() {
         bird.sing();
-        assertEquals("I am singing\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine("I am singing"), byteArrayOutputStream.toString());
     }
 }

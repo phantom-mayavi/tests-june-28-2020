@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.animals.constants.ApplicationConstants.SWIMMING;
 import static org.junit.Assert.*;
 
 public class DuckTest extends BaseTest {
@@ -22,12 +23,12 @@ public class DuckTest extends BaseTest {
     @Test
     public void sing() {
         duck.sing();
-        assertEquals("Quack, quack\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine("Quack, quack"), byteArrayOutputStream.toString());
     }
 
     @Test
     public void swim() {
         duck.swim();
-        assertEquals("I am swimming\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine(SWIMMING), byteArrayOutputStream.toString());
     }
 }

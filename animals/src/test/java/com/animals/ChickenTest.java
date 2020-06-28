@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static com.animals.constants.ApplicationConstants.CANT_FLY;
 import static org.junit.Assert.*;
 
 public class ChickenTest extends BaseTest {
@@ -23,18 +24,18 @@ public class ChickenTest extends BaseTest {
     @Test
     public void sing() {
         chicken.sing();
-        assertEquals("Cluck, cluck\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine("Cluck, cluck"), byteArrayOutputStream.toString());
     }
 
     @Test
     public void sing_rooster() {
         rooster.sing();
-        assertEquals("Cock-a-doodle-doo\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine("Cock-a-doodle-doo"), byteArrayOutputStream.toString());
     }
 
     @Test
     public void fly() {
         chicken.fly();
-        assertEquals("I cannot fly\r\n", byteArrayOutputStream.toString());
+        assertEquals(addNewLine(CANT_FLY), byteArrayOutputStream.toString());
     }
 }
