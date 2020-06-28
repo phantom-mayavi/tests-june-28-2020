@@ -1,12 +1,13 @@
 package com.animals;
 
 import com.animals.actions.Flyable;
+import com.animals.actions.Walkable;
 import com.animals.constants.Sound;
 import com.animals.helper.SoundHelper;
 
 import static com.animals.constants.ApplicationConstants.FLYING;
 
-public class Bird extends Animal implements Flyable {
+public class Bird extends Animal implements Flyable, Walkable {
     private SoundHelper soundHelper;
 
     public Bird() {
