@@ -5,7 +5,9 @@ public enum Sound {
     CHICKEN("Cluck, cluck"),
     DUCK("Quack, quack"),
     ROOSTER("Cock-a-doodle-doo"),
-    DOG("Woof, woof");
+    DOG("Woof, woof"),
+    CAT("Meow");
+
 
     private String s;
 

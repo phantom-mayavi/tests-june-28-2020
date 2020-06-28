@@ -11,7 +11,7 @@ public class Chicken extends Bird implements NonFlyable {
         super(new SoundHelper(Sound.CHICKEN));
     }
 
-    public Chicken(SoundHelper soundHelper) {
+    private Chicken(SoundHelper soundHelper) {
         super(soundHelper);
     }
 

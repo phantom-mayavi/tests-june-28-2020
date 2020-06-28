@@ -1,5 +1,6 @@
 package com.animals.app;
 
+import com.animals.constants.Sound;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +25,7 @@ public class SolutionTest extends BaseTest {
         solution.main(null);
         assertEquals(addNewLine(WALKING) +
                 addNewLine(FLYING) +
-                addNewLine("I am singing") +
-                addNewLine("Cock-a-doodle-doo"), byteArrayOutputStream.toString());
+                addNewLine(Sound.DEFAULT.getSound()) +
+                addNewLine(Sound.ROOSTER.getSound()), byteArrayOutputStream.toString());
     }
 }
